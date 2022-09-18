@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { header } from "../data";
 import Nav from "./Nav";
 import NavMobile from "./NavMobile";
@@ -8,6 +8,16 @@ const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const [navMobile, setNavMobile] = useState(false);
   const { btnLoginText, btnSignupText, logo } = header;
+  
+  window.addEventListener('scroll', () => {
+    window.scrollY > 80 ? setIsActive(true) : setIsActive(false);
+  });
+  // useEffect(() => {
+  //   // scroll event
+  //   window.addEventListener('scroll', () => {
+  //     window.scrollY > 80 ? setIsActive(true) : setIsActive(false);
+  //   });
+  // });
 
   return <header className={`${isActive ? 'bg-neutral-500 py-[16px]' : 'bg-transparent py-[20px]'
     } fixed max-w-[1440px] left-0 right-0 mx-auto flex justify-between items-center px-[20px] lg:px-[80px] z-30 transition-all duration-300`}>

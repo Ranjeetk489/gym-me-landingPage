@@ -22,7 +22,6 @@ const WorkoutSlider = () => {
           slidesPerView: 4,
         },
       }}
-      // modules={[Navigation]}
       className='workoutSlider'
     >
       {programs.map((program, idx) => {
