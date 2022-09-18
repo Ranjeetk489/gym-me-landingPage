@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Accordion = () => {
-  return <div>Accordion</div>;
+  return <accordion>
+    
+  </accordion>;
 };
 
 export default Accordion;
